@@ -1,0 +1,17 @@
+meta {
+  name: Update tag
+  type: http
+  seq: 4
+}
+put {
+  url: {{baseUrl}}/api/tags/1
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+      "name": "Beginner Updated"
+    }
+  }
+}

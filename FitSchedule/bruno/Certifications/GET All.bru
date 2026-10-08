@@ -1,0 +1,10 @@
+meta {
+  name: GET All Certifications
+  type: http
+  seq: 1
+}
+get {
+  url: {{baseUrl}}/api/certifications?populate=*
+  body: none
+  auth: none
+}

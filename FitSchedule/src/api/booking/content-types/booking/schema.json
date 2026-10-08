@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bookings",
+  "info": {
+    "singularName": "booking",
+    "pluralName": "bookings",
+    "displayName": "Booking"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "bookedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "bookingStatus": {
+      "type": "enumeration",
+      "enum": [
+        "confirmed",
+        "cancelled",
+        "attended"
+      ],
+      "default": "confirmed"
+    },
+    "member": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::member.member",
+      "inversedBy": "bookings"
+    },
+    "fitnessClass": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::fitness-class.fitness-class",
+      "inversedBy": "bookings"
+    }
+  }
+}

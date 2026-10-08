@@ -1,0 +1,17 @@
+meta {
+  name: Update trainer
+  type: http
+  seq: 4
+}
+put {
+  url: {{baseUrl}}/api/trainers/1
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+      "firstName": "Алексей"
+    }
+  }
+}

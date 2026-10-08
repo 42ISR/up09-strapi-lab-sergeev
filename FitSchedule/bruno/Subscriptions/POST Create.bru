@@ -1,0 +1,21 @@
+meta {
+  name: Create subscription
+  type: http
+  seq: 3
+}
+post {
+  url: {{baseUrl}}/api/subscriptions
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+        "startDate": "2026-10-01",
+        "endDate": "2026-10-31",
+        "isActive": true,
+        "plan": "monthly",
+        "price": 2500
+    }
+  }
+}

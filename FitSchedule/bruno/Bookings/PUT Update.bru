@@ -1,0 +1,17 @@
+meta {
+  name: Update booking
+  type: http
+  seq: 4
+}
+put {
+  url: {{baseUrl}}/api/bookings/1
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+      "bookingStatus": "confirmed"
+    }
+  }
+}

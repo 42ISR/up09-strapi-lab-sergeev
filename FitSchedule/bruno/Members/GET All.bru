@@ -1,0 +1,10 @@
+meta {
+  name: GET All Members
+  type: http
+  seq: 1
+}
+get {
+  url: {{baseUrl}}/api/members?populate=*
+  body: none
+  auth: none
+}

@@ -1,0 +1,10 @@
+meta {
+  name: GET FitnessClasses by ID
+  type: http
+  seq: 2
+}
+get {
+  url: {{baseUrl}}/api/fitness-classes/1?populate=*
+  body: none
+  auth: none
+}

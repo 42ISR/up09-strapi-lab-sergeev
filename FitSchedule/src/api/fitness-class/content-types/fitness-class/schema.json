@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fitness_classes",
+  "info": {
+    "singularName": "fitness-class",
+    "pluralName": "fitness-classes",
+    "displayName": "FitnessClass"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "scheduledAt": {
+      "type": "datetime"
+    },
+    "duration": {
+      "type": "integer",
+      "min": 1
+    },
+    "maxCapacity": {
+      "type": "integer",
+      "min": 1
+    },
+    "difficulty": {
+      "type": "enumeration",
+      "enum": [
+        "easy",
+        "moderate",
+        "hard"
+      ],
+      "default": "moderate"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "yoga",
+        "cardio",
+        "strength",
+        "pilates",
+        "hiit"
+      ],
+      "required": true
+    },
+    "room": {
+      "type": "string"
+    },
+    "bookings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::booking.booking",
+      "mappedBy": "fitnessClass"
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "fitnessClass"
+    },
+    "trainer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::trainer.trainer",
+      "inversedBy": "fitnessClasses"
+    }
+  }
+}

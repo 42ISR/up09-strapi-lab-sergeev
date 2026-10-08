@@ -1,0 +1,24 @@
+meta {
+  name: Create fitnessClass
+  type: http
+  seq: 3
+}
+post {
+  url: {{baseUrl}}/api/fitness-classes
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+        "title": "Утренняя йога",
+        "description": "Мягкая практика для начинающих.",
+        "scheduledAt": "2026-11-01T08:00:00.000Z",
+        "duration": 60,
+        "maxCapacity": 12,
+        "difficulty": "easy",
+        "type": "yoga",
+        "room": "Зал A"
+    }
+  }
+}

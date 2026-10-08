@@ -1,0 +1,18 @@
+meta {
+  name: Create tag
+  type: http
+  seq: 3
+}
+post {
+  url: {{baseUrl}}/api/tags
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+        "name": "Beginner",
+        "color": "#55AA88"
+    }
+  }
+}

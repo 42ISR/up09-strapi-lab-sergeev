@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscriptions",
+  "info": {
+    "singularName": "subscription",
+    "pluralName": "subscriptions",
+    "displayName": "Subscription"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "endDate": {
+      "type": "date",
+      "required": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "plan": {
+      "type": "enumeration",
+      "enum": [
+        "monthly",
+        "quarterly",
+        "annual"
+      ],
+      "required": true
+    },
+    "price": {
+      "type": "decimal",
+      "min": 0
+    },
+    "member": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::member.member",
+      "inversedBy": "subscriptions"
+    }
+  }
+}

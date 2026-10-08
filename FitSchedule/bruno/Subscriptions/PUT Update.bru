@@ -1,0 +1,19 @@
+meta {
+  name: Update subscription
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/subscriptions/1
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "data": {
+      "isActive": false
+    }
+  }
+}

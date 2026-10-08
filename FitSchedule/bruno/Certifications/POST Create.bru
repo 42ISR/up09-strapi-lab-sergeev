@@ -1,0 +1,19 @@
+meta {
+  name: Create certification
+  type: http
+  seq: 3
+}
+post {
+  url: {{baseUrl}}/api/certifications
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+        "title": "Certified Fitness Trainer",
+        "issuedBy": "Fitness Academy",
+        "issuedAt": "2024-06-15"
+    }
+  }
+}

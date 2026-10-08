@@ -1,0 +1,21 @@
+meta {
+  name: Create member
+  type: http
+  seq: 3
+}
+post {
+  url: {{baseUrl}}/api/members
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+        "firstName": "Анна",
+        "lastName": "Иванова",
+        "phone": "+79990000001",
+        "birthDate": "1998-05-12",
+        "membershipType": "premium"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+meta {
+  name: Update certification
+  type: http
+  seq: 4
+}
+put {
+  url: {{baseUrl}}/api/certifications/1
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+      "title": "Updated title"
+    }
+  }
+}

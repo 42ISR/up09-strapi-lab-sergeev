@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "FitSchedule",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    "documentation"
+  ]
+}

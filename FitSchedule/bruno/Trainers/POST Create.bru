@@ -1,0 +1,23 @@
+meta {
+  name: Create trainer
+  type: http
+  seq: 3
+}
+post {
+  url: {{baseUrl}}/api/trainers
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+        "firstName": "Алексей",
+        "lastName": "Смирнов",
+        "bio": "Тренер по функциональной подготовке и силовым тренировкам.",
+        "specializations": [
+            "strength",
+            "hiit"
+        ]
+    }
+  }
+}

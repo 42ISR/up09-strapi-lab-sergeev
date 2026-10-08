@@ -1,0 +1,17 @@
+meta {
+  name: Update member
+  type: http
+  seq: 4
+}
+put {
+  url: {{baseUrl}}/api/members/1
+  body: json
+  auth: none
+}
+body:json {
+  {
+    "data": {
+      "firstName": "Анна"
+    }
+  }
+}

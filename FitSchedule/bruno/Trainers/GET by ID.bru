@@ -1,0 +1,10 @@
+meta {
+  name: GET Trainers by ID
+  type: http
+  seq: 2
+}
+get {
+  url: {{baseUrl}}/api/trainers/1?populate=*
+  body: none
+  auth: none
+}
